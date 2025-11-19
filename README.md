@@ -1,4 +1,6 @@
-# actividad-S17
+# actividadformativa-S17
+
+Nombre del Docente: Willian Montes Giron
 
 NOMBRE DE LOS INTEGRANTES:
 - MARIELENA VELÁSQUEZ ESCOBAR
