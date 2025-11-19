@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            padding: 30px;
+            background: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+
+        h1{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* CONTENEDOR GENERAL PARA FORMULARIOS */
+        .form-contenedor{
+            padding: 25px;
+            width: 380px;
+            margin: auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.2);
+        }
+
+        label{
+            display: block;
+            margin-top: 12px;
+        }
+
+        button{
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background: #45a049;
+        }
+
+        /* MENU SUPERIOR */
+        ul{
+            list-style: none;
+            padding: 0;
+            background: #333;
+            overflow: hidden;
+            margin-bottom: 25px;
+            border-radius: 6px;
+        }
+
+        li{
+            float: left;
+        }
+
+        li a{
+            display: block;
+            padding: 14px 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        li a:hover{
+            background: #575757;
+        }
+
+        /* TABLAS MEJORADAS */
+        table{
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 0 12px rgba(0,0,0,0.2);
+            font-size: 16px;
+        }
+
+        th, td{
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+
+        th{
+            background: #333;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even){
+            background: #f5f5f5;
+        }
+
+    </style>
+    <title>Universidad</title>
+</head>
+<body>
+
+    <ul>
+        <li><a href="{% url 'home' %}">Página principal</a></li>
+        <li><a href="{% url 'carreras_lista' %}">Carreras</a></li>
+        <li><a href="{% url 'estudiantes_lista' %}">Estudiantes</a></li>
+    </ul>
+
+    {% block body %}
+    {% endblock %}
+
+</body>
+</html>

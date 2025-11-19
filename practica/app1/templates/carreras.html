@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1>Lista de Carreras</h1>
+
+<a href="{% url 'carrera_nueva' %}">Crear nueva carrera</a>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Duración</th>
+            <th>Facultad</th>
+            <th>Descripción</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for c in carreras %}
+        <tr>
+            <td>{{ c.nombre }}</td>
+            <td>{{ c.duracion }} años</td>
+            <td>{{ c.facultad }}</td>
+            <td>{{ c.descripcion }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

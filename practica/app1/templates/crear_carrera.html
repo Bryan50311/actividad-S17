@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h1>Ingreso nueva carrera</h1>
+
+<div class="form-contenedor">
+    <form action="" method="post">
+        {% csrf_token %}
+
+        <label>Nombre</label>
+        {{ form.nombre }}
+
+        <label>Duración (años)</label>
+        {{ form.duracion }}
+
+        <label>Facultad</label>
+        {{ form.facultad }}
+
+        <label>Descripción</label>
+        {{ form.descripcion }}
+
+        <button type="submit">Guardar</button>
+    </form>
+</div>
+
+{% endblock %}
